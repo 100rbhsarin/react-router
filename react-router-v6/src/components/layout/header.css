@@ -1,0 +1,78 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  /* Brand Logo */
+  .navbar-brand .logo {
+    height: 50px;
+    width: auto;
+  }
+  
+  /* Navbar Links */
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .navbar-links li a:hover {
+    color: #ff9800;
+  }
+  
+  /* Auth Buttons */
+  .navbar-auth {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Login Button */
+  .btn.login {
+    background-color: #555;
+    color: white;
+  }
+  
+  .btn.login:hover {
+    background-color: #444;
+  }
+  
+  /* Signup Button */
+  .btn.signup {
+    background-color: #ff9800;
+    color: white;
+  }
+  
+  .btn.signup:hover {
+    background-color: #e68900;
+  }
+   
