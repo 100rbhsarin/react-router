@@ -10,10 +10,10 @@ export const Header = ()=>{
       <h1 className="logo">imdb.hub</h1>
     </div>
     <ul className="navbar-links">
-      <li><NavLink to="#home">Home</NavLink></li>
-      <li><NavLink to="#movies">Movies</NavLink></li>
-      <li><NavLink to="#about">About</NavLink></li>
-      <li><NavLink to="#contact">Contact</NavLink></li>
+      <li><NavLink to="/">Home</NavLink></li>
+      <li><NavLink to="movie">Movies</NavLink></li>
+      <li><NavLink to="about">About</NavLink></li>
+      <li><NavLink to="contact">Contact</NavLink></li>
     </ul>
     <div className="navbar-auth">
       <button className="btn login">Log In</button>

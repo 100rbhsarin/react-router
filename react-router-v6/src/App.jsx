@@ -4,6 +4,8 @@ import { About } from './pages/About';
 import { Movie } from './pages/Movie';
 import { Contact } from './pages/Contact';
 import { AppLayout } from './components/layout/AppLayout';
+import { ErrorHandle } from './pages/ErrorPare';
+import { getBookData } from './pages/GetApiData';
 
 const App = ()=>{
 
@@ -14,6 +16,7 @@ const App = ()=>{
     {
       path: "/",
       element: <AppLayout/>,
+      errorElement: <ErrorHandle/>,
       children: [
         
           {
@@ -23,10 +26,12 @@ const App = ()=>{
           {
             path: "/about",
             element: <About/>,
+          
           },
           {
             path: "/movie",
             element: <Movie/>,
+            loader: getBookData,
           },
           {
             path: "/contact",
