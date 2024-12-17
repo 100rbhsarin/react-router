@@ -1,7 +1,11 @@
 
 import { NavLink } from 'react-router-dom'
 import './header.css'
+
+
 export const Header = ()=>{
+
+
 
     return(
         <>
@@ -12,7 +16,7 @@ export const Header = ()=>{
     <ul className="navbar-links">
       <li><NavLink to="/">Home</NavLink></li>
       <li><NavLink to="movie">Movies</NavLink></li>
-      <li><NavLink to="about">About</NavLink></li>
+      <li><NavLink to="about" >About</NavLink></li>
       <li><NavLink to="contact">Contact</NavLink></li>
     </ul>
     <div className="navbar-auth">

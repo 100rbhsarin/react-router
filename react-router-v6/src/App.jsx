@@ -6,6 +6,7 @@ import { Contact } from './pages/Contact';
 import { AppLayout } from './components/layout/AppLayout';
 import { ErrorHandle } from './pages/ErrorPare';
 import { getBookData } from './pages/GetApiData';
+import { BookDetails } from './components/UI/BookDetails';
 
 const App = ()=>{
 
@@ -32,6 +33,11 @@ const App = ()=>{
             path: "/movie",
             element: <Movie/>,
             loader: getBookData,
+          },
+          {
+            path: "/movie/:bookId",
+            element: <BookDetails/>,
+          
           },
           {
             path: "/contact",

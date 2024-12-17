@@ -1,31 +1,53 @@
-/* HTML: <div class="loader"></div> */
+html, body {
+  margin: 0;
+  height: 100%;
+  /* Optional, to enhance the visibility of the loader */
+}
+
 .loader {
-    width: 40px;
-    height: 26px;
-    --c:no-repeat linear-gradient(#000 0 0);
-    background:
-      var(--c) 0    100%,
-      var(--c) 50%  100%,
-      var(--c) 100% 100%;
-    background-size:8px calc(100% - 4px);
-    position: relative;
+  --s: 25px; /* Size of the loader elements */
+  --g: 5px; /* Gap between elements */
+  
+  width: calc(3 * (1.353 * var(--s) + var(--g)));
+  aspect-ratio: 3;
+  
+  background:
+    linear-gradient(#ff1818 0 0) left/33% 100% no-repeat, /* Ensuring red shows up */
+    conic-gradient(
+      from -90deg at var(--s) calc(0.353 * var(--s)),
+      #fff 135deg, #666 0 270deg, #aaa 0
+    );
+  background-blend-mode: multiply;
+  
+  --_m:
+    linear-gradient(
+      to bottom right,
+      #0000 calc(0.25 * var(--s)), #000 0 calc(100% - calc(0.25 * var(--s)) - 1.414 * var(--g)), #0000 0
+    ),
+    conic-gradient(from -90deg at right var(--g) bottom var(--g), #000 90deg, #0000 0);
+  
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  
+  background-size: calc(100% / 3) 100%;
+  -webkit-mask-size: calc(100% / 3) 100%;
+  mask-size: calc(100% / 3) 100%;
+  
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+  
+  animation: l7 steps(3) 1.5s infinite;
+  
+  background-color: #ff1818; /* Ensuring red as the base color */
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes l7 {
+  to {
+    background-position: 150% 0%;
   }
-  .loader:before {
-    content: "";
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #000;
-    left: 0;
-    top: 0;
-    animation: 
-      l3-1 1.5s  linear infinite alternate,
-      l3-2 0.75s cubic-bezier(0,200,.8,200) infinite;
-  }
-  @keyframes l3-1 {
-    100% {left:calc(100% - 8px)}
-  }
-  @keyframes l3-2 {
-    100% {top:-0.1px}
-  }
+}
