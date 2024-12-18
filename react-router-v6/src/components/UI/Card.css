@@ -42,4 +42,10 @@
     font-size: 14px;
     color: #777;
   }
+
+  .cardbtn{
+    color: red; /* Color for the active link */
+    font-weight: bold; /* Optional for emphasis */
+    background-color: rgb(13, 0, 255);
+  }
   

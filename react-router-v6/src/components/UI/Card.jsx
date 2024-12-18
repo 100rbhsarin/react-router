@@ -19,7 +19,7 @@ const Card = ({ curBook }) => {
 
       <NavLink to={`/movie/${curBook.key.replace('/works/', '')}`}
        state={{ bookDetails: curBook }}>
-            <button >See Details</button>
+            <button className="cardbtn" >See Details</button>
           </NavLink>
     </div>
   );

@@ -75,4 +75,14 @@
   .btn.signup:hover {
     background-color: #e68900;
   }
-   
+
+  .nav-link {
+    color: black; /* Default color for inactive links */
+    text-decoration: none; /* Optional for styling */
+  }
+  
+  .nav-link.active-link {
+    color: red; /* Color for the active link */
+    font-weight: bold; /* Optional for emphasis */
+  }
+  
