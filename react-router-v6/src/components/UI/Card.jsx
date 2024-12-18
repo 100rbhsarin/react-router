@@ -17,7 +17,8 @@ const Card = ({ curBook }) => {
         <p className="card-author">{author_name?.[0] || "Unknown Author"}</p>
       </div>
 
-      <NavLink to={`/movie/${curBook.key.replace('/works/', '')}`}>
+      <NavLink to={`/movie/${curBook.key.replace('/works/', '')}`}
+       state={{ bookDetails: curBook }}>
             <button >See Details</button>
           </NavLink>
     </div>
