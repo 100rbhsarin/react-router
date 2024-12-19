@@ -7,7 +7,7 @@
     padding: 20px 0px 79px;
     position: relative;
       overflow-x: hidden;
-      background-color: #afeea5;
+      background: linear-gradient(to right, #2a2a2b, #7498fc);
 }
 
 

@@ -19,7 +19,7 @@ export const Header = ()=>{
      }>Home</NavLink></li>
       <li><NavLink to="movie" className={({ isActive }) => 
       isActive ? 'nav-link active-link' : 'nav-link'
-     }>Movies</NavLink></li>
+     }>Books</NavLink></li>
       <li><NavLink to="about" className={({ isActive }) => 
       isActive ? 'nav-link active-link' : 'nav-link'
      }>About</NavLink></li>

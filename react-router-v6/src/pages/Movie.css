@@ -4,6 +4,6 @@
     justify-content: center;
     gap: 16px;
     padding: 20px;
-    background-color: #f9f9f9;
+    background: linear-gradient(to right, #3daefa, #feb47b);
   }
   

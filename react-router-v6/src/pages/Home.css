@@ -1,0 +1,167 @@
+.home {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(to right, #5fc4ff, #feb47b);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  /* Animated Book (Left) */
+  .animated-book {
+    position: absolute;
+    /* left: 10%; */
+    bottom: 30%;
+    width: 300px;
+    height: 300px;
+    background-image: url("https://cdn.pixabay.com/photo/2016/06/15/15/25/loudspeaker-1459128_1280.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: bookAnimation 3s ease-in-out infinite;
+  }
+  
+  @keyframes bookAnimation {
+    0%, 100% {
+      transform: rotate(-10deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+  }
+  
+  /* Falling Table (Right) */
+  .falling-table {
+    position: absolute;
+    left: 2%;
+    top: -20px; /* Start outside the screen */
+    width: 500px;
+    height: 300px;
+    background-image: url("https://cdn.pixabay.com/photo/2018/06/20/15/17/elephant-3486708_1280.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: tableFall 3s ease-out forwards;
+  }
+
+  
+  @keyframes tableFall {
+    0% {
+      transform: translateY(-200px);
+    }
+    100% {
+      transform: translateY(calc(70vh - 150px)); /* Adjust to land on the screen */
+    }
+  }
+  
+  /* Falling Chair (Center) */
+  .falling-chair {
+    position: absolute;
+    bottom: 20%;
+    left: 25%;
+    width: 200px;
+    height: 200px;
+    background-image: url("https://cdn.pixabay.com/photo/2017/11/06/18/30/eggplant-2924511_1280.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: chairFall 2s ease-out forwards;
+
+    
+  }
+  
+  @keyframes chairFall {
+    0% {
+      transform: translateY(-200px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Button (CTA) */
+  .cta-button {
+    position: absolute;
+    bottom: 20px;
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 10;
+  }
+
+  .falling-coco{
+    position: absolute;
+    /* right: 50%; */
+    left: 20px;
+    top: -230px; /* Start outside the screen */
+    width: 250px;
+    height: 200px;
+    background-image: url("https://cdn.pixabay.com/photo/2019/05/17/12/02/fish-4209567_1280.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: tableFall 6s ease-out forwards;
+  }
+
+  
+  @keyframes tableFall {
+    0% {
+      transform: translateY(-200px);
+    }
+    100% {
+      transform: translateY(calc(100vh - 100px)); /* Adjust to land on the screen */
+    }
+  }
+
+  .falling-geraf{
+
+    position: absolute;
+    right: 8%;
+    top: -200px; /* Start outside the screen */
+    width: 350px;
+    height: 600px;
+    background-image: url("https://cdn.pixabay.com/photo/2018/07/11/17/37/giraffe-3531510_1280.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: tableFall 3s ease-out forwards;
+  }
+
+  
+  @keyframes tableFall {
+    0% {
+      transform: translateY(-200px);
+    }
+    100% {
+      transform: translateY(calc(59vh - 150px)); /* Adjust to land on the screen */
+    }
+  }
+
+
+  .animated-text {
+    position: absolute;
+    top: -100px; /* Start above the viewport */
+    font-size: 24px;
+    font-weight: bold;
+font-style: mono;
+    color: #3f0df3;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-out, color 0.3s ease-out;
+    animation: dropIn 2s ease-out forwards;
+  }
+  
+  @keyframes dropIn {
+    0% {
+      top: -100px;
+    }
+    100% {
+      top: 10%; /* Center vertically */
+      transform: translateY(-50%);
+    }
+  }
+  
+  .animated-text:hover {
+    color: red; /* Changes color on hover for a visual effect */
+  }
