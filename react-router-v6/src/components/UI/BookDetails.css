@@ -2,7 +2,7 @@
     max-width: 800px;
     margin: 2rem auto;
     padding: 1.5rem;
-    background: #eaeae1;
+    background: linear-gradient(to right, #6da8ea, #fce374);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     font-family: Arial, sans-serif;
